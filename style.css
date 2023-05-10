@@ -22,7 +22,7 @@ body {
 }
 
 .btn pre {
-	padding: 6px 21px;
+	padding: 7px 15px;
 	border-radius: 50px;
 	color: rgb(0, 0, 0);
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -40,9 +40,7 @@ body {
 
 .login,
 .signup {
-	/* color: rgb(236, 200, 39); */
 	font-family: 'Courier New', Courier, monospace;
-	/* font-size: 20px; */
 	border: none;
 	outline: none;
 	background-color: transparent;
@@ -57,8 +55,8 @@ body {
 	background-color: rgb(255, 255, 255);
 }
 
-.form-app {
-	height: 450px;
+.pop-effect {
+	padding: 0px 10px 20px 10px;
 	width: 500px;
 	background-color: rgb(255, 255, 255);
 	position: relative;
@@ -67,14 +65,14 @@ body {
 	transition: box-shadow 0.5s;
 }
 
-.form-app:hover{
+.pop-effect:hover{
 	box-shadow: 8px 8px 20px rgb(128, 128, 128);
 }
 
 .btn {
 	color: rgb(255, 255, 255);
 	height: 35px;
-	width: 180px;
+	width: 160px;
 	margin: 20px auto;
 	box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
 	border-radius: 40px;
@@ -89,12 +87,12 @@ body {
 
 .slider {
 	height: 35px;
-	width: 100px;
+	width: 80px;
 	border-radius: 50px;
 	background: rgb(141, 146, 150);
 	position: absolute;
 	top: 20px;
-	left: 150px;
+	left: 169px;
 	transition: all 0.5s ease-in-out;
 }
 
@@ -104,12 +102,15 @@ body {
 }
 
 .form-section {
-	height: 400px;
 	width: 1000px;
 	display: flex;
 	position: relative;
 	transition: all 0.5s ease-in-out;
 	left: 0px;
+}
+
+.form-section .login-box {
+	height: 300px;
 }
 
 .form-section-move {
@@ -136,44 +137,61 @@ body {
 }
 
 .ele {
-	height: 50px;
-	width: 350px;
+	height: 35px;
+	width: 280px;
 	outline: none;
 	border: none;
 	color: rgb(77, 77, 77);
-	background-color: rgb(240, 240, 240);
+	background-color: rgb(245, 245, 245);
 	border-radius: 50px;
 	padding: 0px 30px;
+	font-size: 16px;
+	transition: height 0.5s,
+				width 0.5s,
+				background-color 0.5s,
+				font-size 0.5s;
+}
+
+.pop-effect:hover .ele{
+	height: 40px;
+	width: 320px;
+	background-color: rgb(240, 240, 240);
 	font-size: 18px;
-	transition: height 0.15s,
-				width 0.15s;
 }
 
-.ele:hover{
-	height: 60px;
-	width: 400px;
+.pop-effect:hover .ele:hover {
+	height: 45px;
+	width: 350px;
 }
 
-.submit-btn{
+.submit-btn {
 	color: white;
 	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 	background-image: linear-gradient(to right,
 			rgb(0, 0, 0),
 			rgb(36, 136, 114));
-	padding: 8px 15px;
+	padding: 6px 11px;
 	border-radius: 50px;
-	font-size: 18px;
+	font-size: 16px;
 	border: none;
 	cursor: pointer;
 	transition: box-shadow 0.15s, 
-				padding 0.5s;
-}
-.submit-btn:hover{
-	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
-	padding: 10px 50px;
+				padding 0.5s,
+				font-size 0.5s;
 }
 
-.submit-btn:active{
+.pop-effect:hover .submit-btn {
+	font-size: 17px;
+	padding: 7px 15px;
+}
+
+.pop-effect:hover .submit-btn:hover {
+	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+	font-size: 18px;
+	padding: 8px 35px;
+}
+
+.submit-btn:active {
 	opacity: 0.8;
 }
 
@@ -194,174 +212,4 @@ body {
 
 .signature a:hover{
 	color: rgb(0, 99, 102);
-}
-
-/* For Responsiveness of the page */
-
-@media screen and (max-width: 650px) {
-	.container {
-		height: 600px;
-		width: 300px;
-	}
-
-	.title {
-		font-size: 15px;
-	}
-
-	.btn {
-		height: 35px;
-		width: 150px;
-		margin: 20px auto;
-	}
-
-	.login,
-	.signup {
-		font-size: 15px;
-	}
-
-	.slider {
-		height: 35px;
-		width: 80px;
-		left: 70px;
-	}
-
-	.moveslider {
-		left: 150px;
-	}
-
-	.form-section {
-		height: 400px;
-		width: 600px;
-	}
-
-	.form-section-move {
-		left: -300px;
-	}
-
-	.login-box,
-	.signup-box {
-		height: 100%;
-		width: 300px;
-	}
-
-	.ele {
-		height: 50px;
-		width: 250px;
-		font-size: 15px;
-		transition: height 0.15s,
-					width 0.15s;
-	}
-
-	.ele:hover{
-		height: 55px;
-		width: 265px;
-	}
-
-	.submit-btn{
-		color: white;
-		background-image: linear-gradient(to right,
-				rgb(27, 23, 18),
-				rgb(33, 172, 214));
-		height: 30px;
-		width: 80px;
-		border-radius: 15px;
-		font-size: 14px;
-		border: none;
-		cursor: pointer;
-		transition: height 0.15s,
-					width 0.15s,
-					border-radius 0.15s;
-	}
-	
-	.submit-btn:hover{
-		height: 40px;
-		width: 85px;
-		border-radius: 20px;
-	}
-}
-
-@media screen and (max-width: 320px) {
-	.container {
-		height: 600px;
-		width: 250px;
-	}
-
-	.heading {
-		font-size: 30px;
-	}
-
-	.title {
-		font-size: 10px;
-	}
-
-	.btn {
-		height: 50px;
-		width: 200px;
-		margin: 20px auto;
-	}
-
-	.login,
-	.signup {
-		font-size: 19px;
-	}
-
-	.slider {
-		height: 50px;
-		width: 100px;
-		left: 27px;
-	}
-
-	.moveslider {
-		left: 127px;
-	}
-
-	.form-section {
-		height: 500px;
-		width: 500px;
-	}
-
-	.form-section-move {
-		left: -250px;
-	}
-
-	.login-box,
-	.signup-box {
-		height: 100%;
-		width: 250px;
-	}
-
-	.ele {
-		height: 50px;
-		width: 220px;
-		font-size: 15px;
-		transition: height 0.15s,
-					width 0.15s;
-	}
-	
-	.ele:hover{
-		height: 60px;
-		width: 230px;
-	}
-
-	.submit-btn{
-		color: white;
-		background-image: linear-gradient(to right,
-				rgb(27, 23, 18),
-				rgb(33, 172, 214));
-		height: 40px;
-		width: 100px;
-		border-radius: 50px;
-		font-size: 18px;
-		border: none;
-		cursor: pointer;
-		transition: height 0.15s,
-					width 0.15s,
-					border-radius 0.15s;
-	}
-	
-	.submit-btn:hover{
-		height: 50px;
-		width: 110px;
-		border-radius: 25px;
-	}
 }
